@@ -1,0 +1,99 @@
+/*Header*/
+.header1{
+    height: 60vh;
+    display: inline-block;
+   background-image:  linear-gradient(to top, rgba(50, 84, 168,0.404)0%,rgba(62, 50, 168,0.404)100%),url(../../assets/img/fondo1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+  
+  }
+  .header2{
+    height: 60vh;
+    display: inline-block;
+    background-image:  linear-gradient(to top, rgba(50, 84, 168,0.404)0%,rgba(62, 50, 168,0.404)100%),url(../../assets/img/fondo2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+  
+  }
+  .header3{
+    height: 60vh;
+    display: inline-block;
+   background-image:  linear-gradient(to top, rgba(50, 84, 168,0.404)0%,rgba(62, 50, 168,0.404)100%),url(../../assets/img/fondo3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+  
+  }
+  
+  .title-head{
+    font-size: 60px;
+    font-weight: bold;
+  }
+  .head{
+  padding: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  text-align: center;
+  }
+  /*Fin Header*/
+
+  /*Search*/
+  .search-section{
+    height: 50vh;
+  }
+  .search-box{
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin-top: -40px;
+  }
+  .search-form{
+    margin-top: 5%;
+  }
+  .input-search{
+     width: 600px;
+     height: 40px;
+     margin-right: 10px;
+     border: solid 1px #000;
+     border-radius: 25px;
+  }
+  .button-gen{
+    border-radius: 25px;
+  }
+  .title-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .title-box h2{
+    font-size: 40px;
+    color: #000;
+    padding-top: 20px;
+    font-weight: bold;
+
+  }
+  .img-icon{
+    width: 100px;
+    height: auto;
+  }
+  .under-box{
+     margin-top: -70px;  
+  }
+  .box-inner{
+    align-items: center;
+  }
+  /*Fin Search*/
