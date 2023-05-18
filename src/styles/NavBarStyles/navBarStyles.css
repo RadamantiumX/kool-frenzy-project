@@ -1,7 +1,9 @@
-.logo{
-    width: 50px;
-    height: auto;
+.nav-bar{
+    z-index: 1030;
+    position: relative;
+    
 }
-.nav-box{
-    height: 170px;
+.logo{
+    height: 50px;
+    width: auto;
 }

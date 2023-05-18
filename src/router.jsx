@@ -6,9 +6,12 @@ import Dashboard from "./pages/Dashboard";
 import Login from "./pages/Login";
 import Product from "./pages/Product";
 import Register from "./pages/Register";
-import Shop from "./pages/shop";
 import Cart from "./pages/Cart";
+import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import Products from "./pages/Products";
+import Category from "./pages/Category";
+import Custom from "./pages/Custom";
 
 const router = createBrowserRouter([
     {
@@ -30,15 +33,27 @@ const router = createBrowserRouter([
             {
                 path: '/register',
                 element: <Register/>
-            },
-            {
-                path: '/shop',
-                element: <Shop/>
-            },
+            },          
             {
                 path: '/product/:id',
                 element: <Product/>
-            }
+            },
+            {
+                path:'/contact' ,
+                element: <Contact/>
+            },
+            {
+                path:'/products',
+                element: <Products/>
+            },
+            {
+                path:'/category',
+                element:<Category/>
+            },
+            {
+                path:'/custom',
+                element: <Custom/>
+            } 
         ]
     },
     {
@@ -46,13 +61,37 @@ const router = createBrowserRouter([
         element: <DefaultLayout/>,
         children:[
             {
+                path:'/',
+                element: <Navigate to="/home"/>
+            },
+            {
                 path:'/dashboard',
                 element: <Dashboard/>
             },
             {
                 path:'/cart',
                 element: <Cart/>
-            } 
+            },
+            {
+                path: '/product/:id',
+                element: <Product/>
+            },
+            {
+                path:'/contact' ,
+                element: <Contact/>
+            },
+            {
+                path:'/products',
+                element: <Products/>
+            },
+            {
+                path:'/category',
+                element:<Category/>
+            },
+            {
+                path:'/custom',
+                element: <Custom/>
+            }       
         ]
     },
     {

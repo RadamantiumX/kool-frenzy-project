@@ -1,16 +1,22 @@
-import React from "react";
+import React,{useState} from 'react';
 import Logo from '../assets/img/logo.png';
 import '../styles/NavBarStyles/navBarStyles.css';
+
+import { Link } from "react-router-dom";
+
+
+
+
 
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
-  { name: 'Productos', href: '#', current: true },
-  { name: 'Temáticas', href: '#', current: false },
-  { name: 'Personalizados', href: '#', current: false },
-  { name: 'COMBOS', href: '#', current: false },
+  { name: 'Productos', route:'/products', current: false },
+  { name: 'Categorías', route:'/category', current: false },
+  { name: 'Personalizados', route:'/custom', current: false },
+  { name: 'Hablemos', route: '/contact', current: false },
 ]
 
 function classNames(...classes) {
@@ -18,8 +24,12 @@ function classNames(...classes) {
 }
 
 export default function NavBar() {
+const handleCurrent=()=>{
+    
+}
+
   return (
-    <Disclosure as="nav" className="bg-gray-800">
+    <Disclosure as="nav" className="nav-bar bg-gray-800">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -37,31 +47,33 @@ export default function NavBar() {
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
-                  <img
-                    className="logo block h-10 w-10 lg:hidden"
+                 <Link to="/home"> <img
+                    className="logo block w-auto lg:hidden"
+                    src={Logo}
+                    alt="Kool frenzy Logo"
+                  /></Link>
+                 <Link to="/home"> <img
+                    className="logo hidden  w-auto lg:block"
                     src={Logo}
                     alt="Kool Frenzy Logo"
-                  />
-                  <img
-                    className="logo hidden h-10 w-10 lg:block"
-                    src={Logo}
-                    alt="Kool Frenzy Logo"
-                  />
+                  /></Link>
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
+                      <Link to={item.route}>
                       <a
+                       onClick={handleCurrent(item)}
                         key={item.name}
-                        href={item.href}
+                        href="#"
                         className={classNames(
                           item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                          'rounded-md px-3 py-2 text-sm font-medium'
+                          'rounded-md px-3 py-3 text-sm font-medium'
                         )}
                         aria-current={item.current ? 'page' : undefined}
                       >
                         {item.name}
-                      </a>
+                      </a></Link>
                     ))}
                   </div>
                 </div>
@@ -72,7 +84,7 @@ export default function NavBar() {
                   className="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                 >
                   <span className="sr-only">View notifications</span>
-                  <BellIcon className="h-6 w-6" aria-hidden="true" />
+                  <i className="fa-solid fa-cart-shopping fa-lg"></i>
                 </button>
 
                 {/* Profile dropdown */}
@@ -157,3 +169,7 @@ export default function NavBar() {
     </Disclosure>
   )
 }
+
+
+
+

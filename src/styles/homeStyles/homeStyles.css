@@ -97,3 +97,162 @@
     align-items: center;
   }
   /*Fin Search*/
+
+  /* Product */
+  .product-section{
+    height: 90vh;
+    background-image:  linear-gradient(to top, rgba(50, 84, 168,0.404)0%,rgba(62, 50, 168,0.404)100%),url(../../assets/img/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+  }
+  .product-title{
+     display: flex;
+     flex-direction: column;
+     text-align: center;
+     padding-top: 30px;
+  }
+  .product-title h5{
+     color: #000;
+     font-size: 40px;
+     font-weight: bold;
+  }
+
+  .product-box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .inner-box-product{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+  .inner-box-product h4{
+    font-size: 40px;
+    color: #000;
+  }
+  /* Fin Product */
+
+  /*Form Section*/
+  .form-section{
+     height: 60vh;
+     background-image: linear-gradient(to top, rgba(137, 143, 158, 0.404)0%,rgba(179, 177, 196, 0.404)100%);
+  }
+  .form-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 50px;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .form-msg{
+    width: 600px;
+  }
+  .btn-msg{
+    margin-top: 20px;
+    width: 150px;
+    border-radius: 25px;
+  }
+  .form-title h4{
+    font-size: 30px;
+  }
+  .logo-msg{
+    height: 200px;
+    width: auto;
+  }
+  /*Fin Form Section*/
+
+  /*Responsive*/
+  @media screen and (max-width: 1400px){
+
+  }
+  @media screen and (max-width: 900px){
+  
+  }
+  @media screen and (max-width: 500px){
+    /*Search section*/
+    .search-section{
+      height: 180vh;
+    }
+    .search-box{   
+      flex-direction: column;
+      margin-top: 10px;
+    }
+    .search-form{
+      margin-top: 5%;
+    }
+    .input-search{
+       width: 250px;
+       
+       margin-left: 12px;
+       margin-bottom: 5px;
+       
+    }
+    .button-gen{
+      
+      margin-left: 12px;
+    }
+    .title-box{
+      flex-direction: column;
+    }
+    .title-box h2{
+      font-size: 17px;
+  
+    }
+   /*Fin Search section*/
+
+   /* Product */
+  .product-section{
+    height: 180vh;
+    
+  }
+ 
+  .product-title h5{   
+     font-size: 30px;
+  }
+
+  .product-box{
+    
+    flex-direction: column;
+   
+  }
+  .inner-box-product{
+    
+    flex-direction: column;
+    
+
+  }
+  .inner-box-product h4{
+    font-size: 35px;
+    
+  }
+  /* Fin Product */
+   
+   /*Form Section*/
+   .form-section{
+    height: 100vh;
+ }
+ .form-box{
+   flex-direction: column;
+   
+ }
+ .form-msg{
+   width: 70%;
+ }
+ .btn-msg{
+   margin-top: 20px;
+   width: 150px;
+   border-radius: 25px;
+ }
+ .form-title h4{
+   font-size: 18px;
+   margin-left: 10px;
+ }
+   /*Fin Form Section*/
+  }
+  /*Fin Responsive*/
