@@ -16,7 +16,7 @@ body{
   color: #888888;
 	height: 100%;
 	overflow-x: hidden;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif !important;
 
 }
 

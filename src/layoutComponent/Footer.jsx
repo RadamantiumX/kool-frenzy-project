@@ -1,150 +1,104 @@
 import React from "react";
-import Logo from '../assets/img/logo.png';
+import Logo from '../assets/img/logo_terminado.png';
 import '../styles/footerStyles/footerStyles.css';
+
+import 'mdb-react-ui-kit/dist/css/mdb.min.css';
+import "@fortawesome/fontawesome-free/css/all.min.css";
+
+
+import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
 
 export default function Footer() {
     return(
+        
         <>
-        <div  className="footer-section">
-            <footer className=" text-center footer-section " id="contact">
-              <div className="container text-center   ">
-                <div style={{ marginTop: "5rem" }} className="row ">
-                  <div className="col-12 col-lg-4">
-                    <h4
-                      className="d-flex justify-content-start"
-                      style={{
-                        color: "#fff",
-                        width: "10rem",
-                        marginBottom: "1rem",
-                      }}
-                    >
-                      <img src={Logo} alt='logo-brand-top ' className='brand-top'/>
-                    </h4>
-    
-                    <p style={{ color: "#fff" }} class="text-start text-responsive">
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry. Lorem Ipsum has been the industry's
-                      standard dummy text ever since the 1500s, when an unknown
-                      printer took a galley of type and scrambled
-                    </p>
-                  </div>
-    
-                  <div className="linea col-1 d-none d-sm-block">
-                    <hr class="vertical" width="2px" noshade="noshade" />
-                  </div>
-                  <div className="col-6 col-lg-2">
-                    
-                    <a
-                      style={{
-                        textDecoration: "none",
-                        marginTop: "1rem",
-                        marginBottom: "1rem",
-                        color: "#fff",
-                      }}
-                      class="nav-link me-lg-3 text-start text-uppercase fw-bold"
-                      href="/about"
-                      title="About Us"
-                      
-                    >
-                     Productos
-                    </a>
-                    
-                    
-                    
-                    <a
-                      style={{
-                        textDecoration: "none",
-                        marginBottom: "1rem",
-                        color: "#fff",
-                      }}
-                      class="nav-link me-lg-3  text-start text-uppercase fw-bold"
-                      href="/servicios"
-                      title="Services"
-                    >
-                      Categorias
-                    </a>
-                    
-                    
-                    
-                     <a
-                      style={{
-                        textDecoration: "none",
-                        marginBottom: "1rem",
-                        color: "#fff",
-                      }}
-                      class="nav-link me-lg-3 text-start text-uppercase fw-bold"
-                      href="/portafolio"
-                      title="Portfolio"
-                    >
-                      Personalizados
-                    </a>
-                    
-                   
-                  
-                    <a
-                      style={{
-                        textDecoration: "none",
-                        marginBottom: "1rem",
-                        color: "#fff",
-                      }}
-                      class="nav-link me-lg-3 text-start text-uppercase fw-bold"
-                      href="/contact"
-                      title="Contact"
-                    >
-                      Hablemos
-                    </a>
-                   
-                   
-                  </div>
-                  <div className="linea col-1 d-none d-sm-block">
-                    <hr
-                      style={{ color: "#fff" }}
-                      class="vertical"
-                      width="2px"
-                      noshade="noshade"
-                    />
-                  </div>
-                  <div className="col-12 col-lg-3 ">
-                    <p
-                      style={{ color: "#fff", marginTop: "1rem" }}
-                      class="d-flex justify-content-center"
-                    >
-                      Seguinos en nuestras Redes
-                    </p>
-                    <div className="d-flex justify-content-center">
-                      <img
-                        className="red-social"
-                        src="https://uploads-ssl.webflow.com/60af88a5233e422dc4f1f472/60b0dfde88780c69eb5758df_FB.svg"
-                      />
-    
-                      <img
-                        className="red-social"
-                        src="https://uploads-ssl.webflow.com/60b05ed14ad9e52e356697b8/60b0faf22717fc829eecd466_IG.svg"
-                      />
-                      <img
-                        className="red-social"
-                        src="https://uploads-ssl.webflow.com/60af88a5233e422dc4f1f472/60b0dfdd4901f21e4a7e0b5e_Twitter.svg"
-                      />
-                      <img
-                        className="red-social"
-                        src="https://uploads-ssl.webflow.com/60af88a5233e422dc4f1f472/60b0dfdd4ad9e5809d69776f_LinkedIn.svg"
-                      />
-                    </div>
-                  </div>
-                </div>
-    
-                <div className='row'>
-                <div style={{marginTop:"10rem", color:"#fff"}} className='col'>
-                &copy; Kool-Frenzy 2023 . All Rights Reserved | Design by <a href="https://epsiweb.com/">EpsiWeb</a>
-                </div>
-    
-                </div>
-                  
-    
-    
-              </div>
-            </footer>
-          </div>
+          <MDBFooter bgColor='dark' className='text-center text-lg-start text-muted py-10'>
+      
+
+      <section className=''>
+        <MDBContainer className='text-center text-md-start mt-5'>
+          <MDBRow className='mt-3'>
+            <MDBCol md="3" lg="4" xl="3" className='mx-auto mb-4'>
+              <h6 className='text-uppercase fw-bold mb-4'>
+                <img src={Logo} alt="Kool frenzy Logo Footer" className="logo-footer"/>
+                Kool-Frenzy
+              </h6>
+              <p>
+                Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit.
+              </p>
+            </MDBCol>
+
+            <MDBCol md="2" lg="2" xl="2" className='mx-auto mb-4'>
+              <h6 className='text-uppercase fw-bold mb-4'>Secciones</h6>
+              <p>
+                <a href='#!' className='text-reset'>
+                  Productos
+                </a>
+              </p>
+              <p>
+                <a href='#!' className='text-reset'>
+                  Categorías
+                </a>
+              </p>
+              <p>
+                <a href='#!' className='text-reset'>
+                  Personalizados
+                </a>
+              </p>
+              <p>
+                <a href='#!' className='text-reset'>
+                  Hablemos
+                </a>
+              </p>
+            </MDBCol>
+
+            <MDBCol md="3" lg="2" xl="2" className='mx-auto mb-4'>
+              <h6 className='text-uppercase fw-bold mb-4'>Legales</h6>
+              <p>
+                <a href='#!' className='text-reset'>
+                  Privacidad
+                </a>
+              </p>
+              <p>
+                <a href='#!' className='text-reset'>
+                  Términos y condiciones
+                </a>
+              </p>
+            
+            </MDBCol>
+
+            <MDBCol md="4" lg="3" xl="3" className='mx-auto mb-md-0 mb-4'>
+              <h6 className='text-uppercase fw-bold mb-4'>Contact</h6>
+              <p>
+                <MDBIcon icon="home" className="me-2" />
+                New York, NY 10012, US
+              </p>
+              <p>
+                <MDBIcon icon="envelope" className="me-3" />
+                info@example.com
+              </p>
+              <p>
+                <MDBIcon icon="phone" className="me-3" /> + 01 234 567 88
+              </p>
+              
+            </MDBCol>
+          </MDBRow>
+        </MDBContainer>
+      </section>
+
+      <div className='text-center p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
+        <p className='text-reset fw-bold'>
+        © 2023 Copyright:
+        
+          Kool-Frenzy | Design by <a href="">Epsiweb</a>
+        </p>
+      </div>
+    </MDBFooter>
+      
+
+     
         </>
-    )
-}
+        
+        )
+    }

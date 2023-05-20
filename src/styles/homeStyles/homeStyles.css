@@ -131,6 +131,9 @@
     align-items: center;
 
   }
+  .inner-box-product:hover{
+    opacity: 0.5;
+  }
   .inner-box-product h4{
     font-size: 40px;
     color: #000;
@@ -139,7 +142,7 @@
 
   /*Form Section*/
   .form-section{
-     height: 60vh;
+     height: 50vh;
      background-image: linear-gradient(to top, rgba(137, 143, 158, 0.404)0%,rgba(179, 177, 196, 0.404)100%);
   }
   .form-box{
@@ -164,6 +167,24 @@
   .logo-msg{
     height: 200px;
     width: auto;
+  }
+  .social-box{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  .social-links{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+  }
+  .social-links i{
+    margin-left: 15px;
+    font-size: 30px;
+  }
+  .social-links i:hover{
+    color: #000;
+    font-weight: bold;
   }
   /*Fin Form Section*/
 
@@ -235,7 +256,7 @@
    
    /*Form Section*/
    .form-section{
-    height: 100vh;
+    height: 120vh;
  }
  .form-box{
    flex-direction: column;
@@ -249,9 +270,13 @@
    width: 150px;
    border-radius: 25px;
  }
+ .form-title{
+   text-align: center;
+ }
  .form-title h4{
    font-size: 18px;
    margin-left: 10px;
+   
  }
    /*Fin Form Section*/
   }

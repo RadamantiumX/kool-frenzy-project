@@ -1,5 +1,7 @@
 import React from "react";
 import '../../styles/homeStyles/homeStyles.css';
+import { Link } from "react-router-dom";
+
 
 const products = [
     {
@@ -10,6 +12,7 @@ const products = [
       imageAlt: "Front of men's Basic Tee in black.",
       price: '$35',
       color: 'Black',
+      link:'/product'
     },
     {
         id: 2,
@@ -19,6 +22,7 @@ const products = [
         imageAlt: "Front of men's Basic Tee in black.",
         price: '$35',
         color: 'Black',
+        link:'/product'
       },
       {
         id: 3,
@@ -28,6 +32,7 @@ const products = [
         imageAlt: "Front of men's Basic Tee in black.",
         price: '$35',
         color: 'Black',
+        link:'/product'
       },
       {
         id: 4,
@@ -37,6 +42,7 @@ const products = [
         imageAlt: "Front of men's Basic Tee in black.",
         price: '$35',
         color: 'Black',
+        link:'/product'
       },
     // More products...
   ]
@@ -50,7 +56,7 @@ export default function MidSection() {
 
         <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
           {products.map((product) => (
-            <div key={product.id} className="group relative">
+           <Link to={product.link}> <div key={product.id} className="group relative">
               <div className="min-h-80 aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
                 <img
                   src={product.imageSrc}
@@ -70,10 +76,12 @@ export default function MidSection() {
                 </div>
                 <p className="text-sm font-medium text-white-900">{product.price}</p>
               </div>
-            </div>
+            </div></Link>
           ))}
         </div>
+        <Link to="/products"><button className="btn btn-danger w-15"><i class="fa-solid fa-plus"></i> Ver mas</button></Link>
       </div>
+      
     </div>
     </>
     )

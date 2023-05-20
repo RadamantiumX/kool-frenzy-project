@@ -11,7 +11,7 @@ export default function FormSection() {
    
     return(
       <>
-        <div className="form-section">
+        <div className="form-section" id="contact">
           <div className="form-box">
           <Form className="form-msg">
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
@@ -21,14 +21,22 @@ export default function FormSection() {
             <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
               <Form.Label>Mensaje</Form.Label>
               <Form.Control as="textarea" rows={3} />
-              <button className="btn btn-warning btn-msg"><i class="fa-solid fa-paper-plane"></i> Enviar</button>
+              <button className="btn btn-info btn-msg" type="submit"><i class="fa-solid fa-paper-plane"></i> Enviar</button>
             </Form.Group>
           </Form>
           <div className="form-title">
+            
             <img className="logo-msg" src={Logo} alt="Kool Frenzy Logo" />
-            <h4>Podes ponerte en contacto con nosotros, no lo dudes...</h4>
-            <p><i className="fa-solid fa-phone"></i> 1536397895</p>
-            <p><i class="fa-solid fa-envelope"></i> ventas@kool-frenzy.com</p>
+            <h4>Estamos esperando tu mensaje...</h4>
+            
+            <div className="social-box">
+              <h6>O Seguinos en nuestras Redes Sociales</h6>
+              <div className="social-links">
+               <a href=""><i class="fa-brands fa-instagram"></i></a>
+               <a href=""><i class="fa-brands fa-facebook"></i></a>
+               <a href=""><i class="fa-brands fa-twitter"></i></a>
+              </div>
+            </div>
           </div>
          </div>
         </div>

@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import Logo from '../assets/img/logo.png';
+import Logo from '../assets/img/logo_terminado.png';
 import '../styles/NavBarStyles/navBarStyles.css';
 
 import { Link } from "react-router-dom";
@@ -16,7 +16,7 @@ const navigation = [
   { name: 'Productos', route:'/products', current: false },
   { name: 'Categorías', route:'/category', current: false },
   { name: 'Personalizados', route:'/custom', current: false },
-  { name: 'Hablemos', route: '/contact', current: false },
+  
 ]
 
 function classNames(...classes) {
@@ -65,7 +65,7 @@ const handleCurrent=()=>{
                       <a
                        onClick={handleCurrent(item)}
                         key={item.name}
-                        href="#"
+                        href={item.href}
                         className={classNames(
                           item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                           'rounded-md px-3 py-3 text-sm font-medium'
@@ -75,17 +75,22 @@ const handleCurrent=()=>{
                         {item.name}
                       </a></Link>
                     ))}
+                    <a href="#contact" className='bg-gray-900 text-white text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-2 py-2 text-sm font-medium'><i class="fa-regular fa-comment-dots"></i> Hablemos</a>
+
+                   
                   </div>
                 </div>
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                <Link to="/cart">
                 <button
                   type="button"
                   className="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                 >
-                  <span className="sr-only">View notifications</span>
+                  <span className="sr-only">Carrito</span>
                   <i className="fa-solid fa-cart-shopping fa-lg"></i>
                 </button>
+                </Link>
 
                 {/* Profile dropdown */}
                 <Menu as="div" className="relative ml-3">

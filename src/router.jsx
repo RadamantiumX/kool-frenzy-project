@@ -7,7 +7,7 @@ import Login from "./pages/Login";
 import Product from "./pages/Product";
 import Register from "./pages/Register";
 import Cart from "./pages/Cart";
-import Contact from "./pages/Contact";
+import Results from "./pages/Results";
 import NotFound from "./pages/NotFound";
 import Products from "./pages/Products";
 import Category from "./pages/Category";
@@ -35,12 +35,8 @@ const router = createBrowserRouter([
                 element: <Register/>
             },          
             {
-                path: '/product/:id',
+                path: '/product',
                 element: <Product/>
-            },
-            {
-                path:'/contact' ,
-                element: <Contact/>
             },
             {
                 path:'/products',
@@ -53,6 +49,10 @@ const router = createBrowserRouter([
             {
                 path:'/custom',
                 element: <Custom/>
+            },
+            {
+                path:'/results',
+                element: <Results/>
             } 
         ]
     },
@@ -73,12 +73,8 @@ const router = createBrowserRouter([
                 element: <Cart/>
             },
             {
-                path: '/product/:id',
+                path: '/product',
                 element: <Product/>
-            },
-            {
-                path:'/contact' ,
-                element: <Contact/>
             },
             {
                 path:'/products',
@@ -91,7 +87,11 @@ const router = createBrowserRouter([
             {
                 path:'/custom',
                 element: <Custom/>
-            }       
+            },
+            {
+                path:'/results',
+                element: <Results/>
+            }        
         ]
     },
     {
